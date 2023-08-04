@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="cordova-plugin-addLocationPermission" version="1.0"
+	xmlns="http://apache.org/cordova/ns/plugins/1.0"
+	xmlns:android="http://schemas.android.com/apk/res/android">
+	<name>cordova-plugin-addLocationPermission</name>
+	
+	<platform name="ios">
+		<config-file target="*-Info.plist" parent="NSLocationAlwaysAndWhenInUseUsageDescription" mode="merge" overwrite="true">
+		    <string>We need access to your location to enhance your app experience.</string>
+		</config-file>
+
+		<config-file target="*-Info.plist" parent="NSLocationAlwaysUsageDescription" mode="merge" overwrite="true">
+		    <string>Allow us to access your location for improved app functionality.</string>
+		</config-file>
+
+		<config-file target="*-Info.plist" parent="NSLocationUsageDescription" mode="merge" overwrite="true">
+		    <string>Grant location access to enable location-based features in the app.</string>
+		</config-file>
+
+		<config-file target="*-Info.plist" parent="NSLocationWhenInUseUsageDescription" mode="merge" overwrite="true">
+		    <string>Enable location access to enjoy location-aware app services.</string>
+		</config-file>
+
+	</platform>
+</plugin>
